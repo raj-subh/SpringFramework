@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define a simple bean for autowiring -->
+    <bean class="com.project.learn_spring01.autowiring.Address" name="address1">
+        <property name="street" value="Temple Street" />
+        <property name="city" value="Ambala" />
+    </bean>
+
+    <bean class="com.project.learn_spring01.autowiring.Address" name="address">
+        <property name="street" value="Second Street" />
+        <property name="city" value="Gurugoan" />
+    </bean>
+
+    <!-- Autowiring by Name -->
+    <!-- <bean class="com.project.learn_spring01.autowiring.Employee" name="employee1" autowire="byName" />
+    <bean class="com.project.learn_spring01.autowiring.Employee" name="employee2" autowire="byName" /> -->
+
+    <!-- Autowiring by Type -->
+    <!-- <bean class="com.project.learn_spring01.autowiring.Employee" name="employee3" autowire="byType" /> -->
+
+    <!-- Autowiring by Constructor -->
+    <bean class="com.project.learn_spring01.autowiring.Employee" name="employee4" autowire="constructor" />
+
+</beans>

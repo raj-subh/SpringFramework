@@ -1,0 +1,11 @@
+src
+└── main
+    ├── java
+    │   └── com
+    │       └── project
+    │           └── learn_spring
+    │               └── inject_collections
+    │                   ├── CollectionData.java
+    │                   └── MainApp.java
+    └── resources
+        └── collection_config.xml

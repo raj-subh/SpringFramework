@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LearnSpringApplication",
+            "request": "launch",
+            "mainClass": "com.project.learn_spring.LearnSpringApplication",
+            "projectName": "learn_spring"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringJdbcApplication<learn_spring02>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.project.learn_spring02.JavaDatabaseConnectivity.SpringJdbcApplication",
+            "projectName": "learn_spring02",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

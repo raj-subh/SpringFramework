@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Injecting using Property tag -->
+    <bean class="com.project.learn_spring.lifecycle.Sweets" name="sweet1" init-method="init" destroy-method="destroy">
+        <property name="price" value="10" />
+    </bean>
+
+    <bean class="com.project.learn_spring.lifecycle.Drinks" name="pepsi1">
+        <property name="pepsiPrice" value="15" />
+    </bean>
+
+    <!-- <!-- Enabling annotation -->
+    <context:annotation-config />
+
+    <bean class="com.project.learn_spring.lifecycle.LifeCycleAnnotations" name="annotations">
+        <property name="subject" value="Personal Development Plan" />
+    </bean> -->
+</beans>

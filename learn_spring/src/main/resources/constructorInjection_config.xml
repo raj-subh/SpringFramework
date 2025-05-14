@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Bean for Certificate -->
+    <bean class="com.project.learn_spring.constructor_injection.Certificate" name="certificate1">
+        <constructor-arg value="Android using Kotlin" />
+    </bean>
+
+    <!-- Bean for Person -->
+    <bean class="com.project.learn_spring.constructor_injection.Person" name="person1">
+        <!-- Injecting name -->
+        <constructor-arg>
+            <value>Raj Subhash</value>
+        </constructor-arg>
+
+        <!-- Injecting ID -->
+        <constructor-arg value="148" type="int" />
+
+        <!-- Injecting Certificate reference -->
+        <constructor-arg ref="certificate1" />
+    </bean>
+
+    <!-- Bean for Addition -->
+    <bean class="com.project.learn_spring.constructor_injection.Addition" name="add">
+        <constructor-arg type="double" value="12.5" />
+        <constructor-arg value="34.5" type="double" />
+    </bean>
+
+</beans>

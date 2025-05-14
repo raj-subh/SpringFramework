@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define a simple bean -->
+    <bean class="com.project.learn_spring.collections.Employee" name="Employee1">
+
+        <!-- Set name -->
+        <property name="name" value="Anam" />
+
+        <!-- Set list -->
+        <property name="phones">
+            <list>
+                <value>9046789564</value>
+                <value>0974689t78</value>
+                <value>0984986756</value>
+                <value>9549866749</value>
+                <value>4567987659</value>
+            </list>
+        </property>
+
+        <!-- Set set -->
+        <property name="address">
+            <set>
+                <value>Patna</value>
+                <value>Noida</value>
+                <value>Chennai</value>
+                <value>Banglore</value>
+                <value>Lucknow</value>
+            </set>
+        </property>
+
+        <!-- Set map -->
+        <property name="courses">
+            <map>
+                <entry key="C++" value="1-Month" />
+                <entry key="Java" value="2-Month" />
+                <entry key="Python" value="1-Month" />
+                <entry key="JavaScript" value="2-Month" />
+                <entry key="C Programming" value="1-Month" />
+            </map>
+        </property>
+
+        <!-- Set properties -->
+        <property name="props">
+            <props>
+                <prop key="Role"> Software Engineer </prop>
+                <prop key="Department"> Development </prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

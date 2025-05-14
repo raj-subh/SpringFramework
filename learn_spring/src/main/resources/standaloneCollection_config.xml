@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Standalone List -->
+    <util:list list-class="java.util.LinkedList" id="myBestFriends">
+        <value>Aman</value>
+        <value>Rohit</value>
+        <value>Raj</value>
+        <value>Abhi</value>
+    </util:list>
+
+    <!-- Standalone Map -->
+    <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="Spring Framework" value="8000" />
+        <entry key="Django Framework" value="5000" />
+        <entry key="Hibernate Framework" value="2000" />
+    </util:map>
+
+    <!-- Standalone Properties -->
+    <util:properties id="dbconfig">
+        <prop key="driver"> com.mysql.jdbc.Driver </prop>
+        <prop key="username"> root </prop>
+        <prop key="password"> space </prop>
+        <prop key="url"> mysql:jdbc://localhost:3306/database </prop>
+    </util:properties>
+
+    <!-- Define a simple bean -->
+    <bean class="com.project.learn_spring.standalone.collections.Person" name="person1">
+        <!-- Injecting value of Standalone List by using their id name -->
+        <property name="friends">
+            <ref bean="myBestFriends" />
+        </property>
+
+        <!-- Injecting value of Standalone Map by using their id name -->
+        <property name="feeDetails" ref="fees" />
+
+        <!-- Injecting value of Standalone Properties by using their id name -->
+        <property name="properties" ref="dbconfig" />
+    </bean>
+
+</beans>
